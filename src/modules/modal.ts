@@ -3,6 +3,7 @@ export const modal = (): void => {
   const btnOpen: HTMLElement = document.querySelector('.btn-open') as HTMLElement;
   const btns: NodeListOf<HTMLElement> = document.querySelectorAll('.btn');
   const closeModal: HTMLElement = document.querySelector('.modal-close') as HTMLElement;
+  const modalOverlay: HTMLElement = document.querySelector('.modal-overlay') as HTMLElement;
 
   btns.forEach((btn: Element) => {
     btn.addEventListener('click', (e: Event) => {
@@ -23,13 +24,10 @@ export const modal = (): void => {
       }
     });
 
-    // const hiddenModal = (e: Event) => {
-    //   const target = e.target as HTMLElement;
-    //   if(target.closest('.modal')) {
-    //     modalElem.style.display = 'none';
-    //   }
-    // }
-   
+    modalOverlay.addEventListener("click", (e) => {
+      if (e.target == modalOverlay) {
+        modalElem.style.display = 'none';
+      }
+    })
   })
-  
 }
