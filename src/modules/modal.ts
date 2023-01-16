@@ -1,9 +1,11 @@
 export const modal = (): void => {
-  const modalBlock: HTMLElement = document.querySelector('.modal-block') as HTMLElement;
+  const modalElem: HTMLElement = document.querySelector('.modal') as HTMLElement;
   const btnOpen: HTMLElement = document.querySelector('.btn-open') as HTMLElement;
   const btnClose: HTMLElement = document.querySelector('.btn-close') as HTMLElement;
   const btns: NodeListOf<HTMLElement> = document.querySelectorAll('.btn');
+  const closeModal: HTMLElement = document.querySelector('.modal-close') as HTMLElement;
 
+ 
 
   btns.forEach((btn: Element) => {
     btn.addEventListener('click', (e: Event) => {
@@ -11,16 +13,19 @@ export const modal = (): void => {
     })
 
     btnOpen.addEventListener('click', () => {
-      modalBlock.style.display = 'flex';
+      modalElem.style.display = 'block';
     })
     btnClose.addEventListener('click', () => {
-      modalBlock.style.display = 'none';
+      modalElem.style.display = 'none';
+    })
+    closeModal.addEventListener('click', () => {
+      modalElem.style.display = 'none';
     })
 
     document.addEventListener("keydown", function (e) {
       const key = e.key;
       if (key === "Escape") {
-        modalBlock.style.display = 'none';
+        modalElem.style.display = 'none';
       }
     });
 
