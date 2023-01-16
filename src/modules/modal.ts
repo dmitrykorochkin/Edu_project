@@ -12,6 +12,7 @@ export const modal = (): void => {
 
     btnOpen.addEventListener('click', () => {
       modalElem.style.display = 'block';
+      closeModal.focus()
     })
     closeModal.addEventListener('click', () => {
       modalElem.style.display = 'none';
