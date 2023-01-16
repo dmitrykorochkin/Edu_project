@@ -24,12 +24,12 @@ export const modal = (): void => {
       }
     });
 
-    const closeModal = (e: Event) => {
-      const target = e.target as HTMLElement;
-      if(target.matches('.modal-block')) {
-        modalBlock.style.display = 'none';
-      }
-    }
+    // const closeModal = (e: Event) => {
+    //   const target = e.target as HTMLElement;
+    //   if(target.matches('.modal-block')) {
+    //     modalBlock.style.display = 'none';
+    //   }
+    // }
     
   })
   
