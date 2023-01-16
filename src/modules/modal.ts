@@ -23,12 +23,12 @@ export const modal = (): void => {
       }
     });
 
-    const hiddenModal = (e: Event) => {
-      const target = e.target as HTMLElement;
-      if(target.closest('.modal')) {
-        modalElem.style.display = 'none';
-      }
-    }
+    // const hiddenModal = (e: Event) => {
+    //   const target = e.target as HTMLElement;
+    //   if(target.closest('.modal')) {
+    //     modalElem.style.display = 'none';
+    //   }
+    // }
    
   })
   
