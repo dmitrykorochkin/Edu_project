@@ -36,22 +36,28 @@ label {
 /* ************  modal ******************* */
 
 .modal-block {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   background-color: rgb(86, 221, 120);
   font-size: 20px;
   text-align: center;
+  transition: all 0.3s ease-in-out;
+  align-items: center;
+  justify-content: center;
 }
 .modal {
   margin-top: 100px;
+
+
 }
 .modal-block {
   display: none;
 }
 .modal-btn {
-  margin-top: 30px;
+  margin: 30px 0px 30px 0px;
 }
 button {
   padding: 20px 40px;
   font-size: 16px;
+  cursor: pointer;
 }
