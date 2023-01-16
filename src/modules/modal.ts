@@ -1,11 +1,8 @@
 export const modal = (): void => {
   const modalElem: HTMLElement = document.querySelector('.modal') as HTMLElement;
   const btnOpen: HTMLElement = document.querySelector('.btn-open') as HTMLElement;
-  const btnClose: HTMLElement = document.querySelector('.btn-close') as HTMLElement;
   const btns: NodeListOf<HTMLElement> = document.querySelectorAll('.btn');
   const closeModal: HTMLElement = document.querySelector('.modal-close') as HTMLElement;
-
- 
 
   btns.forEach((btn: Element) => {
     btn.addEventListener('click', (e: Event) => {
@@ -14,9 +11,6 @@ export const modal = (): void => {
 
     btnOpen.addEventListener('click', () => {
       modalElem.style.display = 'block';
-    })
-    btnClose.addEventListener('click', () => {
-      modalElem.style.display = 'none';
     })
     closeModal.addEventListener('click', () => {
       modalElem.style.display = 'none';
@@ -29,13 +23,13 @@ export const modal = (): void => {
       }
     });
 
-    // const closeModal = (e: Event) => {
-    //   const target = e.target as HTMLElement;
-    //   if(target.matches('.modal-block')) {
-    //     modalBlock.style.display = 'none';
-    //   }
-    // }
-    
+    const hiddenModal = (e: Event) => {
+      const target = e.target as HTMLElement;
+      if(target.closest('.modal')) {
+        modalElem.style.display = 'none';
+      }
+    }
+   
   })
   
 }
