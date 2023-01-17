@@ -7,9 +7,9 @@ export const accordion = () => {
         this.classList.toggle('active');
         const accordionText: HTMLElement = (this.nextElementSibling as HTMLElement)
         if(accordionText.style.maxHeight)  {
-          (accordionText as HTMLElement).style.maxHeight = null
+          (accordionText as HTMLElement).style.maxHeight = ''
         } else {
-          accordionText.style.maxHeight = accordionText.scrollHeight + 'px'
+          accordionText.style.maxHeight = `${accordionText.scrollHeight}px`
         }
       })
     })
