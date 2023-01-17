@@ -4,8 +4,6 @@
   padding: 0;
 }
 
-
-
 input {
   height: 1px;
   width: 1px;
@@ -43,9 +41,7 @@ label {
   align-items: center;
   justify-content: center;
   position: relative;
-  
 }
-
 
 .modal-overlay {
   position: fixed;
@@ -72,7 +68,6 @@ label {
 }
 button:focus {
   outline: 1px solid rgb(233, 13, 13);
-
 }
 
 .modal-close {
@@ -93,12 +88,11 @@ button:focus {
   text-decoration: underline;
   cursor: pointer;
   margin-bottom: 20px;
-  transition: all 0.5s; 
+  transition: all 0.5s;
 }
 .accordion_text {
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.2s ease-out;
   margin-bottom: 15px;
-
 }
