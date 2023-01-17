@@ -6,10 +6,10 @@ export const accordion = () => {
     accordions[i].addEventListener('click', function(this: HTMLElement) {
       this.classList.toggle('active');
       const accordionText = (this.nextElementSibling as HTMLElement)
-      if(accordionText.style.display === 'block') {
-        accordionText.style.display = 'none'
+      if(accordionText.style.maxHeight) {
+        accordionText.style.maxHeight = null
       } else {
-        accordionText.style.display = 'block'
+        accordionText.style.maxHeight = accordionText.scrollHeight + 'px'
       }
     })
   }

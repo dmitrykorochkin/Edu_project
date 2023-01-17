@@ -93,9 +93,12 @@ button:focus {
   text-decoration: underline;
   cursor: pointer;
   margin-bottom: 20px;
+  transition: all 0.5s; 
 }
 .accordion_text {
-  display: none;
   overflow: hidden;
-  padding: 10px;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  margin-bottom: 15px;
+
 }
